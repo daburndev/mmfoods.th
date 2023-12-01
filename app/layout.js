@@ -36,10 +36,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={raleway.className}>
         <Provider>
-          <UserLocationContext value={{userLocation,setUserLocation}}>
+          <UserLocationContext.Provider value={{userLocation,setUserLocation}}>
           <HeaderNavBar/>
         {children}
-        </UserLocationContext>
+        </UserLocationContext.Provider>
           </Provider></body>
     </html>
   )
