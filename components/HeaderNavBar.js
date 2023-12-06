@@ -31,11 +31,11 @@ function HeaderNavBar() {
     className='rounded-full'/>
     :null}
     </div>
-    <div>
+    {/* <div>
       <button 
       onClick={()=>signOut()}
       >Sign Out</button>
-    </div>
+    </div> */}
     </div>
   )
 }
