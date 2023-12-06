@@ -1,36 +1,34 @@
 const CategoryListData=[
     {
         id:1,
-        name:'Indian',
-        value:'Indian restaurant',
-        icon:'/masala-dosa.png'
+        name:'Premium',
+        value:'Burmese premium restaurant',
+        icon:'/premium.png'
     },
     {
         id:2,
-        name:'Mexican',
-        value:'Mexican restaurant',
-        icon:'/taco.png'
+        name:'Breakfast',
+        value:'Burmese restaurant',
+        icon:'/mohinga.png'
     },
     {
-        id:3,
-        name:'Italian',
-        value:'Italian restaurant',
+        id:2,
+        name:'Rice&Curry',
+        value:'Myanmar Rice and Curry restaurant',
+        icon:'/masala-dosa.png'
+    },
+    {
+        id:4,
+        name:'Bar',
+        value:'Burmese Bar & Restaurant',
+        icon:'/bar.png'
+    },
+    {
+        id:5,
+        name:'Snacks',
+        value:'Burmese Snacks Restaurant',
         icon:'/ramen.png'
     },
-    {
-        id:4,
-        name:'Chinese',
-        value:'Chinese restaurant',
-        icon:'/pizza.png'
-    },
-    {
-        id:4,
-        name:'Japanese',
-        value:'japanese restaurant',
-        icon:'/bento.png'
-    },
- 
-  
 ]
 
 const ratingList=[

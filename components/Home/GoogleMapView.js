@@ -1,9 +1,10 @@
 "use client"
-import { LoadScript, GoogleMap } from '@react-google-maps/api'
+import { LoadScript, GoogleMap, MarkerF } from '@react-google-maps/api'
 import React, { useContext, useEffect, useState } from 'react'
-import { UserLocationContext } from '../../context/UserLocationContext'
-
-function GoogleMapView() {
+import { UserLocationContext } from '../../context/UserLocationContext';
+import Markers from './Markers';
+import { SelectedBusinessContext } from '../../context/SelectedBusinessContext';
+function GoogleMapView({businessList}) {
 
     const{userLocation,setUserLocation} = useContext(UserLocationContext)
     const containerStyle={
@@ -21,10 +22,24 @@ function GoogleMapView() {
         >
             <GoogleMap
             mapContainerStyle={containerStyle}
-            center={coordinate}
-            zoom={13}
+            center={userLocation}
+            zoom={15}
             options={{mapId:'562aca4945d1eb37'}}
             >
+                <MarkerF
+                position={userLocation}
+                icon={{
+                    url:'/user-location.png',
+                    scaledSize:{
+                        width:50,
+                        height:50
+                    }
+                }
+                }
+                />
+                {businessList.map((item,index)=>(
+                    <Markers business={item} key={index}/>
+                ))}
             </GoogleMap>
         </LoadScript>
     </div>
