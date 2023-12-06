@@ -1,5 +1,5 @@
 "use client"
-import { signOut, useSession } from 'next-auth/react'
+// import { signOut, useSession } from 'next-auth/react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation';
 import { useContext, useEffect, useState } from 'react';
@@ -15,18 +15,18 @@ import Markers from './../components/Home/Markers';
 import { UserLocationContext } from '../context/UserLocationContext';
 
 export default function Home() {
-  const {data:session}=useSession();
+  // const {data:session}=useSession();
   const [category, setCategory] = useState();
   const [ radius, setRadius ] = useState(2500);
   const [businessList, setBusinessList] = useState([]);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
   const {userLocation, setUserLocation} = useContext(UserLocationContext);
-  useEffect(()=>{
-    if(!session?.user){
-      router.push("/login")
-    }
-  },[session])
+  // useEffect(()=>{
+  //   if(!session?.user){
+  //     router.push("/login")
+  //   }
+  // },[session])
 
   useEffect(()=>{
     getGooglePlace();
